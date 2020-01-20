@@ -9,6 +9,7 @@ import (
 var token string
 var cmdRegex string
 var daemon bool
+var workDir string
 
 var rootCmd = &cobra.Command{
 	Use:   "httpcmd",
@@ -27,6 +28,7 @@ func init() {
 	cobra.OnInitialize(initLog)
 	rootCmd.PersistentFlags().StringVarP(&token, "token", "t", "", "access token")
 	rootCmd.PersistentFlags().StringVarP(&cmdRegex, "regex", "r", "", "command regex")
+	rootCmd.PersistentFlags().StringVarP(&workDir, "workdir", "w", "./", "work dir")
 	rootCmd.PersistentFlags().BoolVarP(&daemon, "daemon", "d", false, "run as daemon")
 }
 

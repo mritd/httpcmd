@@ -32,7 +32,7 @@ func server(daemon bool) {
 			PidFilePerm: 0644,
 			LogFileName: "httpcmd.log",
 			LogFilePerm: 0640,
-			WorkDir:     "./",
+			WorkDir:     workDir,
 			Umask:       027,
 		}
 
