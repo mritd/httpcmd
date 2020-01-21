@@ -33,7 +33,7 @@ func server(daemon bool) {
 			LogFileName: "httpcmd.log",
 			LogFilePerm: 0640,
 			WorkDir:     workDir,
-			Umask:       027,
+			Umask:       0022,
 		}
 
 		d, err := cntxt.Reborn()
